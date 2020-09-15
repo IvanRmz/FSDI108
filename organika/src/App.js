@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./components/navBar";
 import QuantityPicker from "./components/quantityPicker";
 import Footer from "./components/footer";
+import Todo from "./components/todo";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -12,9 +13,8 @@ function App() {
       <div className="App">
         <NavBar></NavBar>
         <h1>Hello React!!!</h1>
-        <QuantityPicker></QuantityPicker> 
+        <QuantityPicker></QuantityPicker>
       </div>
-      <Footer></Footer>
       <Footer></Footer>
     </React.Fragment>
   );
