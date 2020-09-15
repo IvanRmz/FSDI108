@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "../css/quantityPicker.css";
+
 class QuantityPicker extends Component {
   // test = () => {
   //   var dog = {
@@ -49,14 +51,16 @@ class QuantityPicker extends Component {
     // this.test();
 
     return (
-      <div>
+      <div className = "picker">
         <button onClick={this.increase} className="btn btn-primary">
           +
         </button>
-        <label>{this.state.quantity}</label>
-        <button 
-          onClick={this.decrease} 
-          disabled = {this.state.quantity === 0}
+        <label className="border border-dark quantity-lbl">
+          {this.state.quantity}
+        </label>
+        <button
+          onClick={this.decrease}
+          disabled={this.state.quantity === 0}
           className="btn btn-primary"
         >
           -

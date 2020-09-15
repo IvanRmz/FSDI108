@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import Todo from "./components/todo";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import Item from "./components/item";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <h1>Hello React!!!</h1>
         <QuantityPicker></QuantityPicker>
       </div>
+      <Item></Item>
       <Footer></Footer>
     </React.Fragment>
   );
