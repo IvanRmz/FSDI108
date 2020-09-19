@@ -14,10 +14,16 @@ class Item extends Component {
         <img
           className="item-img"
           placeholder="Image"
-          src={this.state.img}
+          src={"/images/products/" + this.props.produc.image}
         ></img>
-        <h3 className="item-price">${this.state.price}</h3>
+        <h2 className="item-title">{this.props.produc.title}</h2>
+        
+        <h4 className="item-price">Price: ${this.props.produc.price}</h4>
+        <h3 className="item-total">Total</h3>
         <QuantityPicker></QuantityPicker>
+        <div className="btn-add">
+          <button className="btn btn-sm btn-primary">Add</button>
+        </div>
       </div>
     );
   }

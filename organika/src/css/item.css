@@ -1,5 +1,6 @@
 .container-item {
-    width: 20%;
+    display: inline-block;
+    width: 22%;
     border-radius: 10%;
     border: 1px solid;
     padding: 10px;
@@ -11,6 +12,19 @@
     width: 100%;
     padding: .5rem 1rem .5rem 1rem;
 }
-.item-price , .picker, .item-img {
+.item-price , .picker, .item-img , .item-total , .item-title{
+    text-align: center;
+}
+
+.item-price {
+    color: gray;
+    font-size: 1rem;
+}
+.item-total {
+    color: red;
+}
+
+.btn-add {
+    margin-top: 1rem;
     text-align: center;
 }
