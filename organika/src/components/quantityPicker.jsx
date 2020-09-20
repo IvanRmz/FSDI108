@@ -43,7 +43,7 @@ class QuantityPicker extends Component {
   // };
 
   state = {
-    quantity: 1,
+    quantity: this.props.value,
     name: "Ivan",
   };
 
@@ -51,8 +51,12 @@ class QuantityPicker extends Component {
     // this.test();
 
     return (
-      <div className = "picker">
-        <button onClick={this.increase} className="btn btn-primary">
+      <div className="picker">
+        <button 
+          onClick={this.increase} 
+          disabled={this.state.quantity === this.props.max}
+          className="btn btn-primary"
+        >
           +
         </button>
         <label className="border border-dark quantity-lbl">
@@ -60,7 +64,7 @@ class QuantityPicker extends Component {
         </label>
         <button
           onClick={this.decrease}
-          disabled={this.state.quantity === 0}
+          disabled={this.state.quantity === this.props.minimum}
           className="btn btn-primary"
         >
           -
@@ -70,13 +74,18 @@ class QuantityPicker extends Component {
   }
 
   increase = () => {
-    this.setState({ quantity: this.state.quantity + 1 });
+    let value = this.state.quantity + 1;
+    if (value <= this.props.max) {
+      this.setState({ quantity: value });
+      this.props.onValueChange(value);
+    }
   };
 
   decrease = () => {
     let newVal = this.state.quantity - 1;
-    if (newVal >= 0) {
+    if (newVal >= this.props.minimum) {
       this.setState({ quantity: newVal });
+      this.props.onValueChange(newVal);
     }
   };
 }

@@ -19,10 +19,10 @@ var data = [
     },
     {
         id: "5f40a6baa9e6e22fa1d5fac4",
-        price: 32.00,
+        price: 5.00,
         stock: 20,
-        title: "Strawberry",
-        image: "img-15.jpg",
+        title: "Tomato",
+        image: "product-18.jpg",
         discount: 0,
         category: "Fruit"
     },
@@ -60,6 +60,7 @@ var data = [
         title: "Egg",
         image: "img-15.jpg",
         discount: 12,
+        minimum: 6,
         category: "Dairy & Eggs"
     },
     {
